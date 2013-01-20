@@ -18,7 +18,8 @@ public class StringCompare {
 
     public static int compareBoxedReduce(String s1, String s2) {
         assert s1.length() == s2.length();
-        return intRange(0, s1.length()).boxed()
+        return intRange(0, s1.length())
+                .boxed()
                 .parallel()
                 .reduce(0, (l, i) -> (l != 0) ? l : Character.compare(s1.charAt(i), s2.charAt(i)),
                            (l, r) -> (l != 0) ? l : r);
