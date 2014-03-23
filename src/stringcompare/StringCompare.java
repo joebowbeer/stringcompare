@@ -1,7 +1,8 @@
 package stringcompare;
 
-import static java.lang.Character.compare;
 import java.util.stream.IntStream;
+
+import static java.lang.Character.compare;
 
 public class StringCompare {
 
